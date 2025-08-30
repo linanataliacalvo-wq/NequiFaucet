@@ -1,0 +1,735 @@
+body {
+  font-family: sans-serif;
+  background-color: #333;
+  color: white;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  width: 100%;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #212121;
+}
+
+.logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nequi-logo {
+  height: 25px;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+}
+
+.menu-icon .bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  list-style: none;
+  background-color: #333;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.container {
+  max-width: 400px;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.yellow {
+  background-color: #FFC107;
+  color: black;
+}
+
+.green {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-box {
+  background-color: #444;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.form-box h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.form-box form label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.form-box form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+}
+
+.captcha-container {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.captcha-container label {
+  display: inline;
+}
+
+.blue {
+  background-color: #007BFF;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Login form styles */
+#forms-section {
+  display: block;
+}
+
+.login-box {
+  display: none;
+}
+
+.forgot-links a {
+  color: #007BFF;
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 0.8em;
+}
+
+/* Dashboard styles */
+.dashboard {
+  display: none;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.balance-info {
+  background-color: #2d2d2d;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.deposit-btn, .withdraw-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deposit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.withdraw-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.jackpot-section {
+  background-color: #2d2d2d;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.jackpot-title {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.jackpot-number {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.rank {
+  font-size: 0.8em;
+}
+
+.bonus-section {
+  background-color: #2d2d2d;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.bonus-title {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.timer {
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+
+.timer-value {
+  font-weight: bold;
+}
+
+.notification-box {
+  background-color: #ffeb3b;
+  color: black;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+}
+
+.notification-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.play-now-btn {
+  background-color: #ffc107;
+  color: black;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fair-text, .instruction-text {
+  margin-top: 15px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* Nuevos estilos para la sección "Multiply Nequi" */
+.multiply-box {
+  background-color: #2d2d2d;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.multiply-box p {
+  margin-top: 0;
+}
+
+.multiply-box .highlight {
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.progress-container {
+  background-color: #444;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.btc-amount {
+  background-color: #ffc107;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.progress-text {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+.progress-percent {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.progress-bonus-box {
+  background-color: #ffc107;
+  color: black;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btc-bonus {
+  font-weight: bold;
+}
+
+/* Nuevos estilos para la tabla de premios */
+.prize-table-container {
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: black;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Estilos para el nuevo botón y checkbox */
+.roll-btn-container {
+  margin-top: 20px;
+}
+
+.roll-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sound-option {
+  margin-top: 15px;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sound-option input {
+  margin-right: 5px;
+}
+
+/* Estilos para el nuevo temporizador */
+.countdown-timer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1em;
+  display: none;
+}
+
+.countdown-timer span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.countdown-timer p {
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+
+#game-result {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Nuevos estilos para el formulario de registro */
+.input-choice {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.phone-input-container {
+  display: flex;
+  gap: 5px;
+}
+
+.phone-input-container #country-code {
+  width: auto;
+  min-width: 90px;
+}
+
+/* Estilos para los modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #444;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 350px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-modal-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #ffc107;
+}
+
+.modal-content p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.nequi-number {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #4CAF50;
+  margin-top: 5px;
+}
+
+.info-message {
+  font-size: 0.8em;
+  color: #bbb;
+  margin-top: 15px;
+}
+
+.modal-content input, .modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+}
+
+.modal-content button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Nuevos estilos para el juego Hi-Lo */
+.hi-lo-game {
+  background-color: #2d2d2d;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.hi-lo-game h2 {
+  color: #ffc107;
+  font-size: 1.2em;
+}
+
+.back-btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.current-number-box {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#current-number {
+  font-size: 3em;
+  font-weight: bold;
+  color: #4CAF50;
+  display: inline-block;
+  padding: 0 10px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.bet-section {
+  margin-top: 20px;
+}
+
+.bet-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bet-section input {
+  width: 80%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
+.guess-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.guess-buttons button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  flex-basis: 45%;
+}
+
+#hilo-result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.hilo-instructions {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+.jackpot-hilo-section {
+  background-color: #212121;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.jackpot-hilo-section h3 {
+  color: #ffc107;
+  margin: 0;
+}
+
+.prize-table-hilo {
+  width: 100%;
+  margin-top: 15px;
+  color: white;
+  text-align: left;
+}
+
+.hilo-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.hilo-table-row.header {
+  font-weight: bold;
+  background-color: #444;
+  text-align: center;
+}
+
+.hilo-table-row:last-child {
+  border-bottom: none;
+}
+
+.hilo-table-row input[type="radio"] {
+  width: auto;
+  margin: 0 auto;
+}
+
+.hilo-table-row label {
+    margin-right: auto;
+    cursor: pointer;
+}
+
+/* Estilo para la opción de apuesta normal */
+#bet-normal + label {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Estilo al seleccionar un radio button */
+input[type="radio"]:checked + label {
+    text-shadow: 0 0 5px #ffc107;
+}
+
+/* Nueva sección de la apuesta normal */
+#normal-bet-section {
+    margin-top: 20px;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#normal-bet-section h3 {
+    margin-top: 0;
+    color: #ffc107;
+}
+
+.bet-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bet-input-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bet-input-container input {
+    width: 100px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.bet-input-container input:focus {
+    outline: none;
+    border-color: #ffc107;
+}
